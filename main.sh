@@ -66,7 +66,7 @@ then
     mkdir -p plugins
     display
 echo "
-  $(tput setaf 1)Modded By CQQN_Spark
+  $(tput setaf 1)By CQQN_Spark
   $(tput setaf 2)Made By ewn#9981 & fate#0993
   $(tput setaf 3)What Server Software you goin to use lmao
   1) Paper 1.8.8    6) Bungeecord
