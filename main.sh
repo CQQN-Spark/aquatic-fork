@@ -8,12 +8,16 @@ function display {
     #Display MOTD
     echo "
     ==========================================================================            
-    $(tput setaf 6)                            __  .__                         .___             
-    $(tput setaf 6)_____    ________ _______ _/  |_|__| ____   ____   ____   __| _/____   ______
-    $(tput setaf 6)\__  \  / ____/  |  \__  \\   __\  |/ ___\ /    \ /  _ \ / __ |/ __ \ /  ___/   
-    $(tput setaf 6) / __ \< <_|  |  |  // __ \|  | |  \  \___|   |  (  <_> ) /_/ \  ___/ \___ \  
-    $(tput setaf 6)(____  /\__   |____/(____  /__| |__|\___  >___|  /\____/\____ |\___  >____  >   
-    $(tput setaf 6)     \/    |__|          \/             \/     \/            \/    \/     \/    
+    $(tput setaf 6) ▄▄▄        █████   █    ██  ▄▄▄     ▄▄▄█████▓ ██▓ ▄████▄   ███▄    █  ▒█████  ▓█████▄ ▓█████   ██████
+    $(tput setaf 6)▒████▄    ▒██▓  ██▒ ██  ▓██▒▒████▄   ▓  ██▒ ▓▒▓██▒▒██▀ ▀█   ██ ▀█   █ ▒██▒  ██▒▒██▀ ██▌▓█   ▀ ▒██    ▒
+    $(tput setaf 6)▒██  ▀█▄  ▒██▒  ██░▓██  ▒██░▒██  ▀█▄ ▒ ▓██░ ▒░▒██▒▒▓█    ▄ ▓██  ▀█ ██▒▒██░  ██▒░██   █▌▒███   ░ ▓██▄   
+    $(tput setaf 6)░██▄▄▄▄██ ░██  █▀ ░▓▓█  ░██░░██▄▄▄▄██░ ▓██▓ ░ ░██░▒▓▓▄ ▄██▒▓██▒  ▐▌██▒▒██   ██░░▓█▄   ▌▒▓█  ▄   ▒   ██▒
+    $(tput setaf 6) ▓█   ▓██▒░▒███▒█▄ ▒▒█████▓  ▓█   ▓██▒ ▒██▒ ░ ░██░▒ ▓███▀ ░▒██░   ▓██░░ ████▓▒░░▒████▓ ░▒████▒▒██████▒▒
+    $(tput setaf 6) ▒▒   ▓▒█░░░ ▒▒░ ▒ ░▒▓▒ ▒ ▒  ▒▒   ▓▒█░ ▒ ░░   ░▓  ░ ░▒ ▒  ░░ ▒░   ▒ ▒ ░ ▒░▒░▒░  ▒▒▓  ▒ ░░ ▒░ ░▒ ▒▓▒ ▒ ░
+    $(tput setaf 6)  ▒   ▒▒ ░ ░ ▒░  ░ ░░▒░ ░ ░   ▒   ▒▒ ░   ░     ▒ ░  ░  ▒   ░ ░░   ░ ▒░  ░ ▒ ▒░  ░ ▒  ▒  ░ ░  ░░ ░▒  ░ ░
+    $(tput setaf 6)  ░   ▒      ░   ░  ░░░ ░ ░   ░   ▒    ░       ▒ ░░           ░   ░ ░ ░ ░ ░ ▒   ░ ░  ░    ░   ░  ░  ░  
+    $(tput setaf 6)      ░  ░    ░       ░           ░  ░         ░  ░ ░               ░     ░ ░     ░       ░  ░      ░  
+    $(tput setaf 6)                                                  ░                             ░                      
     ==========================================================================
     "  
 }
@@ -28,7 +32,7 @@ function forceStuffs {
 
 function launchJavaServer {
   # Using Aikars flags.
-  java -Xms1024M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paper-server.jar nogui
+  java -Xms1024M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar server.jar nogui
 }
 FILE=eula.txt
 
@@ -49,6 +53,9 @@ function optimizeJavaServer {
 
   # Prevents players from entering an unloaded chunk (due to lag), which causes more lag.
   # echo "prevent-moving-into-unloaded-chunks: true" >> paper.yml
+  
+  # Worlds folder
+  echo "world-container: worlds" >> bukkit.yml
   
 }
 
@@ -89,11 +96,9 @@ case $n in
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085351443394570/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006691507434164244/1006694392465203400/server.jar
 
     display
-    
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 8."
     
     sleep 10
     
@@ -112,11 +117,9 @@ case $n in
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085463896870942/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006684720303714415/1006697443733286972/server.jar
 
-    display   
-
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 11."
+    display
     
     sleep 10
 
@@ -135,11 +138,9 @@ case $n in
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085612710756412/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006636629504577636/1006696015241433098/server.jar
 
-    display   
-
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 16."
+    display
     
     sleep 10
 
@@ -158,7 +159,7 @@ case $n in
 
     forceStuffs
 
-    curl -O https://download2276.mediafire.com/5dptw00gq4mg/dcnk3b1x0h1aial/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006691603664097281/1006699806669942844/server.jar
 
     display
 
@@ -179,7 +180,7 @@ case $n in
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085707342667838/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006691524911845437/1006702236363128955/server.jar
 
     display
 
@@ -194,7 +195,7 @@ case $n in
   6)
     echo "$(tput setaf 3)Downloading latest Bungeecord..."
 
-    curl -O https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+    curl -O https://cdn.discordapp.com/attachments/1006691560169152522/1006702994382934116/BungeeCord.jar
 
     display 
 
