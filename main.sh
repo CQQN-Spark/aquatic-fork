@@ -69,10 +69,10 @@ echo "
   $(tput setaf 1)Modded By CQQN_Spark#8203
   $(tput setaf 2)Made By ewn#9981 & fate#0993
   $(tput setaf 3)What Server Software you goin to use
-  1) Vanilla 1.19.2  |  6) Bungeecord
-  2) Paper 1.19.2    |
+  1) Vanilla 1.19.2  |  5) Bukkit 1.19.2
+  2) Paper 1.19.2    |  6) Bungeecord
   3) PurPur 1.19.2   |
-  4) Bukkit 1.19.2   |
+  4) Spigot 1.19.2   |
   "
   echo "$(tput setaf 1)RESTART YOUR SERVER IF YOU HAVE A SERVER SOFTWARE ALREADY INSTALLED AND THIS APPEARED AGAIN."
   
@@ -83,7 +83,7 @@ case $n in
   1) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.8.8 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 Vanilla..."
 
     sleep 4
 
@@ -106,7 +106,7 @@ case $n in
   2) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.12.2 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 Paper..."
 
     sleep 4
 
@@ -129,7 +129,7 @@ case $n in
   3) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.16.5 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 PurPur..."
 
     sleep 4
 
@@ -152,7 +152,7 @@ case $n in
   4)
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.17.1 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 Spigot..."
 
     sleep 4
 
@@ -173,7 +173,7 @@ case $n in
   5) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.18.1 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 bukkit..."
 
     sleep 4
 
