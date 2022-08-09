@@ -66,14 +66,13 @@ then
     mkdir -p plugins
     display
 echo "
-  $(tput setaf 1)Spark
+  $(tput setaf 1)Modded By CQQN_Spark#8203
   $(tput setaf 2)Made By ewn#9981 & fate#0993
-  $(tput setaf 3)What Server Software you goin to use lmao
-  1) Paper 1.8.8    6) Bungeecord
-  2) Paper 1.12.2
-  3) Paper 1.16.5
-  4) Paper 1.17.1
-  5) Paper 1.18.1
+  $(tput setaf 3)What Server Software you goin to use
+  1) Vanilla 1.19.2  |  6) Bungeecord
+  2) Paper 1.19.2    |
+  3) PurPur 1.19.2   |
+  4) Bukkit 1.19.2   |
   "
   echo "$(tput setaf 1)RESTART YOUR SERVER IF YOU HAVE A SERVER SOFTWARE ALREADY INSTALLED AND THIS APPEARED AGAIN."
   
