@@ -15,7 +15,7 @@ function display {
     $(tput setaf 6)(____  /\__   |____/(____  /__| |__|\___  >___|  /\____/\____ |\___  >____  >   
     $(tput setaf 6)     \/    |__|          \/             \/     \/            \/    \/     \/    
     ==========================================================================
-    "
+    "  
 }
 
 function forceStuffs {
@@ -66,7 +66,7 @@ then
     mkdir -p plugins
     display
 echo "
-  $(tput setaf 1)By CQQN_Spark
+  $(tput setaf 1)Spark
   $(tput setaf 2)Made By ewn#9981 & fate#0993
   $(tput setaf 3)What Server Software you goin to use lmao
   1) Paper 1.8.8    6) Bungeecord
@@ -174,13 +174,13 @@ case $n in
   5) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.19.2 PurPur..."
+    echo "$(tput setaf 3)Downloading 1.18.1 Paper..."
 
     sleep 4
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/1006636629504577636/1006637219865436251/purpur-1.19.2-1757.jar
+    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085707342667838/paper-server.jar
 
     display
 
