@@ -173,13 +173,13 @@ case $n in
   5) 
     sleep 1
 
-    echo "$(tput setaf 3)Downloading 1.18.1 Paper..."
+    echo "$(tput setaf 3)Downloading 1.19.2 PurPur..."
 
     sleep 4
 
     forceStuffs
 
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085707342667838/paper-server.jar
+    curl -O https://cdn.discordapp.com/attachments/1006636629504577636/1006637219865436251/purpur-1.19.2-1757.jar
 
     display
 
