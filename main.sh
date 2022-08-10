@@ -56,7 +56,8 @@ function optimizeJavaServer {
   # echo "prevent-moving-into-unloaded-chunks: true" >> paper.yml
   
   # Worlds folder
-  echo "settings: world-container: worlds" >> bukkit.yml
+  echo "settings:
+  world-container: worlds" >> bukkit.yml
   
 }
 
